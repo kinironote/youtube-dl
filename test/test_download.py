@@ -109,9 +109,9 @@ def generator(test_case, tname):
             if not (info_dict.get('id') and info_dict.get('ext')):
                 raise Exception('Test definition incorrect. The output file cannot be known. Are both \'id\' and \'ext\' keys present?')
 
-        if 'skip' in test_case:
-            print_skipping(test_case['skip'])
-            return
+        #if 'skip' in test_case:
+        #    print_skipping(test_case['skip'])
+        #    return
         for other_ie in other_ies:
             if not other_ie.working():
                 print_skipping('test depends on %sIE, marked as not WORKING' % other_ie.ie_key())
